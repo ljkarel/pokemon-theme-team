@@ -1,0 +1,27 @@
+.flipCard {
+    perspective: 1000px;
+}
+
+.flipCardInner {
+    display: grid;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flipCard:hover .flipCardInner {
+    transform: rotateX(-180deg);
+}
+
+.flipCardFront, .flipCardBack {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    backface-visibility: hidden;
+}
+
+.flipCardBack {
+    transform: rotateX(180deg);
+}
+
+p {
+    font-size: 10px;
+}
